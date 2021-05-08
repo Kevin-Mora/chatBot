@@ -67,8 +67,7 @@
             android:background="@drawable/btn_bg"
             android:text="Registarse"
             android:textColor="#FFF"
-            android:textStyle="bold"
-            app:backgroundTint="@" />
+            android:textStyle="bold" />
 
 
         <LinearLayout
