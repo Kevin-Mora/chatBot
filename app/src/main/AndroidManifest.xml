@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GG">
-        <activity android:name=".activity_welcome"></activity>
+        <activity android:name=".activity_register"></activity>
+        <activity android:name=".activity_welcome" />
         <activity
             android:name=".ui.MainActivity"
             android:label="MyTutorEd">
