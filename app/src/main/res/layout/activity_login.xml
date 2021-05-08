@@ -57,7 +57,7 @@
             android:id="@+id/btnInicioSesion"
             android:layout_width="350dp"
             android:layout_height="56dp"
-            android:text="Iniciar sesión"
+            android:text="Iniciar sesiónn"
             android:layout_marginTop="36dp"
             android:layout_marginBottom="15dp"
             android:background="@drawable/btn_bg"
