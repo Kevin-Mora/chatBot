@@ -5,6 +5,7 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".activity_register">
 
     <LinearLayout
@@ -46,8 +47,8 @@
             android:layout_height="50dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="15dp"
-            android:inputType="textEmailAddress"
-            android:hint="E-mail" />
+            android:hint="E-mail"
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/password"
@@ -55,8 +56,8 @@
             android:layout_height="50dp"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="15dp"
-            android:inputType="textPassword"
-            android:hint="Contraseña" />
+            android:hint="Contraseña"
+            android:inputType="textPassword" />
 
         <Button
             android:id="@+id/btnRegistro"
