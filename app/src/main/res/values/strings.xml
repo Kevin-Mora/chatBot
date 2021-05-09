@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GG</string>
+    <string name="escribe_un_mensaje">Escribe un mensaje...</string>
+    <string name="enviar">Enviar</string>
 </resources>

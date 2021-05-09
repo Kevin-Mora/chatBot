@@ -11,13 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity_login"></activity>
-        <activity android:name=".ui.MainActivity" />
-        <activity android:name=".activity_welcome" />
-        <activity
-            android:name=".activity_register"
+        <activity android:name=".ui.activity_login" />
+        <activity android:name=".ui.MainActivityChat" />
+        <!-- activity android:name=".activity_welcome" -->
+        <!-- en mi caso no voy a usar el manifest para iniciar la actividad principal-->
+        <!-- Voy a marcar como la activity principal a MainActiviy y desde ella voy a llamar a -->
+
+        <!-- android:name=".activity_register" -->
+       <activity android:name=".ui.MainActivity"
             android:label="MyTutorEd">
-            <intent-filter>
+           <!-- activity_welcome -->
+           <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

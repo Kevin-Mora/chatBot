@@ -24,11 +24,9 @@
             android:layout_weight=".5"
             android:background="@drawable/round_button"
             android:backgroundTint="@android:color/white"
-            android:hint="@string/escribe_un_mensaje"
+            android:hint="Escribe un mensaje..."
             android:padding="10dp"
-            android:singleLine="true"
-            tools:targetApi="lollipop"
-            android:importantForAutofill="no" />
+            android:singleLine="true" />
 
         <Button
             android:id="@+id/btn_send"
@@ -38,10 +36,9 @@
             android:layout_weight="1"
             android:background="@drawable/round_button"
             android:backgroundTint="@color/colorBlue"
-            android:text="@string/enviar"
+            android:text="Enviar"
             android:textColor="@android:color/white"
-            app:backgroundTint="@color/colorBlue"
-            tools:targetApi="lollipop" />
+            app:backgroundTint="@color/colorBlue" />
 
     </LinearLayout>
 
