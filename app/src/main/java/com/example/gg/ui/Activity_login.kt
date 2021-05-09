@@ -2,6 +2,7 @@ package com.example.gg.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 import com.example.gg.R
 
@@ -16,5 +17,8 @@ class activity_login : AppCompatActivity() {
 
         txtEmail=findViewById(R.id.txtEmail)
         txtPassword=findViewById(R.id.txtPassword)
+    }
+    fun loadActivityRegister(v: View){
+        setContentView(R.layout.activity_register)
     }
 }

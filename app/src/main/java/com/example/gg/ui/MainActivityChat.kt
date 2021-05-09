@@ -5,8 +5,11 @@ import android.content.Intent.ACTION_VIEW
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.gg.R
 import com.example.gg.data.Message
 import com.example.gg.utils.BotResponse
@@ -15,12 +18,18 @@ import com.example.gg.utils.Constants.OPEN_SEARCH
 import com.example.gg.utils.Constants.RECEIVE_ID
 import com.example.gg.utils.Constants.SEND_ID
 import com.example.gg.utils.Time
+//Hay errores con este import
 //import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.*
 
 class MainActivityChat : AppCompatActivity() {
 
+    //Me marcaba como error unresolved reference, así que use el metodo que usan las otras activitys para
+    //usar las view
+    private lateinit var btn_send: Button
+    private lateinit var et_message: TextView
     private lateinit var  adapter: MessagingAdapter
+    private lateinit var rv_messages: RecyclerView
     // Nombres a los que el bot se identifica
     private var botList = listOf("Ed", "Profesor Ed", "Super Ed", "Mr. Ed")
 
@@ -37,6 +46,8 @@ class MainActivityChat : AppCompatActivity() {
     }
 
     private fun clickEvents() {
+        //Me marcaba como error unresolved reference, así que use el metodo que usan las otras activitys para
+        //usar views
         btn_send.setOnClickListener{
             sendMessage()
         }
