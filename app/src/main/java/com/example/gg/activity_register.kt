@@ -62,13 +62,10 @@ class activity_register : AppCompatActivity() {
         val lastname:String=txtLastName.text.toString()
         val email:String=txtEmail.text.toString()
         val password:String=txtPassword.text.toString()
-<<<<<<< HEAD
         //Le puse el ? a String para que pueda aceptar valores nulos, y le puse el ? a currentUser para que cuando se nulo
         //no se extraiga de él el atributo uid
         val uid:String? = FirebaseAuth.getInstance().currentUser?.uid
 
-=======
->>>>>>> e0e5f118aae28ac06f5e2e0297e353834d353ccc
 
         // Confirmamos que los campos no esten vacios
         if(!TextUtils.isEmpty(username) && !TextUtils.isEmpty(lastname) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(
