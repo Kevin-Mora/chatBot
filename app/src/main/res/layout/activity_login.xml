@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="350dp">
+        android:layout_marginBottom="250dp">
 
         <TextView
             android:id="@+id/textView8"
@@ -29,18 +29,15 @@
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="15dp"
             android:hint="E-mail"
             android:inputType="textEmailAddress"
-            android:textColor="@color/colorGray" />
+            android:layout_marginTop="40dp"/>
 
         <EditText
             android:id="@+id/txtPassword"
             android:layout_width="350dp"
             android:layout_height="50dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginTop="8dp"
             android:inputType="textPassword"
             android:hint="Contraseña"
             android:layout_marginLeft="30dp"
@@ -48,22 +45,23 @@
 
 
         <TextView
-            android:id="@+id/forgotPassword"
+            android:onClick="forgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginLeft="245dp"
+            android:layout_marginTop="0dp"
             android:text="Olvide mi contraseña"
             android:textSize="14sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            />
 
         <Button
-            android:id="@+id/btnInicioSesion"
+            android:onClick="login"
+            android:id="@+id/btnLogin"
             android:layout_width="350dp"
-            android:layout_height="56dp"
+            android:layout_height="50dp"
             android:text="Iniciar sesión"
             android:layout_marginTop="36dp"
-            android:layout_marginBottom="15dp"
             android:background="@drawable/btn_bg"
             android:textColor="#FFF"
             android:textStyle="bold"
@@ -95,7 +93,7 @@
                 android:layout_marginLeft="30dp"/>
 
             <TextView
-                android:id="@+id/txtRegistro"
+                android:onClick="txtRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Registrate"

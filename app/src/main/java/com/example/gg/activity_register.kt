@@ -8,12 +8,13 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-
+import java.util.stream.DoubleStream.builder
 
 
 @Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
@@ -61,10 +62,13 @@ class activity_register : AppCompatActivity() {
         val lastname:String=txtLastName.text.toString()
         val email:String=txtEmail.text.toString()
         val password:String=txtPassword.text.toString()
+<<<<<<< HEAD
         //Le puse el ? a String para que pueda aceptar valores nulos, y le puse el ? a currentUser para que cuando se nulo
         //no se extraiga de él el atributo uid
         val uid:String? = FirebaseAuth.getInstance().currentUser?.uid
 
+=======
+>>>>>>> e0e5f118aae28ac06f5e2e0297e353834d353ccc
 
         // Confirmamos que los campos no esten vacios
         if(!TextUtils.isEmpty(username) && !TextUtils.isEmpty(lastname) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(
@@ -85,18 +89,44 @@ class activity_register : AppCompatActivity() {
 
                     userDB.child("Nombre").setValue(username)
                     userDB.child("Apellido").setValue(lastname)
-                   Login()
+                    userDB.child("Email").setValue(email)
+                    userDB.child("Contraseña").setValue(password)
+                   login()
 
+
+                }
+                else
+                {
 
                 }
 
             }
 
         }
+        else //Hay campos vacios
+        {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Error")
+            builder.setMessage("¡Ups! Parece que no haz llenado todos tus datos.")
+            builder.setPositiveButton("OK",null)
+            val dialog:AlertDialog=builder.create()
+            dialog.show()
+
+            //Muestra en que parte esta el error
+            if(TextUtils.isEmpty(username) && TextUtils.isEmpty(lastname) && TextUtils.isEmpty(email) && TextUtils.isEmpty(password))
+            {
+                txtUsename.setError("Nombre");
+                txtLastName.setError("Apellido");
+                txtEmail.setError("Email");
+                txtPassword.setError("Contraseña");
+            }
+
+
+        }
 
     }
     // Inicia ventana Login
-    private fun Login()
+    private fun login()
     {
         startActivity(Intent(this, activity_login::class.java))
 
@@ -114,4 +144,11 @@ class activity_register : AppCompatActivity() {
             }
         }
     }
+    //Abre ventana Login
+    fun txtLogin(view: View)
+    {
+        startActivity(Intent(this, activity_login::class.java))
+    }
+
+
 }
