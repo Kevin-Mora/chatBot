@@ -16,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase
 
 
 
+@Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class activity_register : AppCompatActivity() {
 
     //Declaración variables
@@ -60,7 +61,10 @@ class activity_register : AppCompatActivity() {
         val lastname:String=txtLastName.text.toString()
         val email:String=txtEmail.text.toString()
         val password:String=txtPassword.text.toString()
-        val uid = FirebaseAuth.getInstance().currentUser.uid
+        //Le puse el ? a String para que pueda aceptar valores nulos, y le puse el ? a currentUser para que cuando se nulo
+        //no se extraiga de él el atributo uid
+        val uid:String? = FirebaseAuth.getInstance().currentUser?.uid
+
 
         // Confirmamos que los campos no esten vacios
         if(!TextUtils.isEmpty(username) && !TextUtils.isEmpty(lastname) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(
