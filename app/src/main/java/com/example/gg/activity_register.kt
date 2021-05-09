@@ -8,12 +8,13 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-
+import java.util.stream.DoubleStream.builder
 
 
 class activity_register : AppCompatActivity() {
@@ -60,7 +61,6 @@ class activity_register : AppCompatActivity() {
         val lastname:String=txtLastName.text.toString()
         val email:String=txtEmail.text.toString()
         val password:String=txtPassword.text.toString()
-        val uid = FirebaseAuth.getInstance().currentUser.uid
 
         // Confirmamos que los campos no esten vacios
         if(!TextUtils.isEmpty(username) && !TextUtils.isEmpty(lastname) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(
@@ -87,8 +87,32 @@ class activity_register : AppCompatActivity() {
 
 
                 }
+                else
+                {
+
+                }
 
             }
+
+        }
+        else //Hay campos vacios
+        {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Error")
+            builder.setMessage("¡Ups! Parece que no haz llenado todos tus datos.")
+            builder.setPositiveButton("OK",null)
+            val dialog:AlertDialog=builder.create()
+            dialog.show()
+
+            //Muestra en que parte esta el error
+            if(TextUtils.isEmpty(username) && TextUtils.isEmpty(lastname) && TextUtils.isEmpty(email) && TextUtils.isEmpty(password))
+            {
+                txtUsename.setError("Nombre");
+                txtLastName.setError("Apellido");
+                txtEmail.setError("Email");
+                txtPassword.setError("Contraseña");
+            }
+
 
         }
 

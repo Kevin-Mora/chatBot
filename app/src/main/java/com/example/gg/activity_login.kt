@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
@@ -63,15 +64,40 @@ class activity_login : AppCompatActivity() {
             auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this){
                 task ->
 
-                if(task.isSuccessful){
+                if(task.isSuccessful){ ///Autenticación exitosa
                     action()
-                }else{
+                }else{ //usuario no registrado
                     Toast.makeText(this, "Error en la autenticación", Toast.LENGTH_LONG).show()
+                    val builder = AlertDialog.Builder(this)
+                    builder.setTitle("Error")
+                    builder.setMessage("¡Ups! tengo problemas con la autenticación de usuario.")
+                    builder.setPositiveButton("OK",null)
+                    val dialog:AlertDialog=builder.create()
+                    dialog.show()
                 }
             }
 
         }
+        else // Si hay campos vacios
+        {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Error")
+            builder.setMessage("¡Ups! Parece que no haz llenado todos tus datos.")
+            builder.setPositiveButton("OK",null)
+            val dialog: AlertDialog =builder.create()
+            dialog.show()
+
+            //Muestra en que parte esta el error
+            if(TextUtils.isEmpty(email) && TextUtils.isEmpty(password))
+            {
+                txtEmail.setError("Email");
+                txtPassword.setError("Contraseña");
+            }
+
+        }
     }
+
+    // Despliega el MainActivity (Chat)
     private fun action(){
         startActivity(Intent(this,MainActivity::class.java))
     }
