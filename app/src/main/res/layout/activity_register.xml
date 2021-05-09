@@ -60,7 +60,7 @@
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/btnRegistro"
+            android:onClick="btnRegistrarse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
@@ -68,7 +68,8 @@
             android:background="@drawable/btn_bg"
             android:text="Registarse"
             android:textColor="#FFF"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="OnClick" />
 
 
         <LinearLayout
