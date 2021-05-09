@@ -81,7 +81,9 @@ class activity_register : AppCompatActivity() {
 
                     userDB.child("Nombre").setValue(username)
                     userDB.child("Apellido").setValue(lastname)
-                   Login()
+                    userDB.child("Email").setValue(email)
+                    userDB.child("Contraseña").setValue(password)
+                   login()
 
 
                 }
@@ -92,7 +94,7 @@ class activity_register : AppCompatActivity() {
 
     }
     // Inicia ventana Login
-    private fun Login()
+    private fun login()
     {
         startActivity(Intent(this, activity_login::class.java))
 
@@ -110,4 +112,11 @@ class activity_register : AppCompatActivity() {
             }
         }
     }
+    //Abre ventana Login
+    fun txtLogin(view: View)
+    {
+        startActivity(Intent(this, activity_login::class.java))
+    }
+
+
 }
