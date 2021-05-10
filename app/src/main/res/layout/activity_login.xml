@@ -156,7 +156,6 @@
                     android:background="@color/colorBlue"
                     android:layout_gravity="center_vertical"
                     android:orientation="horizontal">
-
                 </LinearLayout>
 
             </LinearLayout>
@@ -166,7 +165,6 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
-
                 <Button
                     android:id="@+id/btnGoogle"
                     android:layout_width="318dp"
@@ -177,7 +175,6 @@
                     android:textAllCaps="false"
                     android:textColor="#ffffff"
                     android:textSize="18sp" />
-
                 <Button
                     android:id="@+id/btnFacebook"
                     android:layout_width="318dp"
@@ -189,9 +186,6 @@
                     android:textColor="#ffffff"
                     android:textSize="18sp" />
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

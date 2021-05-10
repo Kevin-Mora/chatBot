@@ -6,19 +6,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4eb3ec9-a75a-43c6-b10a-c798f92348aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/GG.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/app/GG.app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/.idea/modules/app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../app/build.gradle" afterDir="false" />
-    </list>
+    <list default="true" id="c4eb3ec9-a75a-43c6-b10a-c798f92348aa" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
