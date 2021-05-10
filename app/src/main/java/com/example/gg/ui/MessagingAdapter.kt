@@ -6,15 +6,22 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gg.R
 import com.example.gg.data.Message
+import com.example.gg.databinding.MessageItemBinding
 import com.example.gg.utils.Constants.RECEIVE_ID
 import com.example.gg.utils.Constants.SEND_ID
+import com.google.android.material.internal.ContextUtils
 import kotlinx.android.synthetic.main.message_item.view.*
 
-class MessagingAdapter: RecyclerView.Adapter<MessagingAdapter.MessageViewHolder>() {
+//import kotlinx.android.synthetic.main.message_item.view.*
 
+class MessagingAdapter: RecyclerView.Adapter<MessagingAdapter.MessageViewHolder>() {
+    //Me marcaba como error unresolved reference, así que use el metodo que usan las otras activitys para
+    //usar las view
     var messagesList = mutableListOf<Message>()
 
     inner class MessageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

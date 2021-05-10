@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase
 
 
 @Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
-class activity_register : AppCompatActivity() {
+class Activity_register : AppCompatActivity() {
 
     //Declaración variables
     private lateinit var txtUsename: EditText
@@ -99,7 +99,7 @@ class activity_register : AppCompatActivity() {
     // Inicia ventana Login
     private fun Login()
     {
-        startActivity(Intent(this, activity_login::class.java))
+        startActivity(Intent(this, Activity_login::class.java))
 
     }
     // Verificar Email

@@ -1,5 +1,6 @@
 package com.example.gg.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,10 +12,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_welcome)
     }
     fun load_activity_register(v: View){
-        setContentView(R.layout.activity_register)
+       // setContentView(R.layout.activity_register)
+       startActivity(Intent(this,Activity_register::class.java))
     }
     fun load_activity_login(v: View){
-        setContentView(R.layout.activity_login)
+        //setContentView(R.layout.activity_login)
+        startActivity(Intent(this,Activity_login::class.java))
     }
 }
 
