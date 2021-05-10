@@ -40,7 +40,7 @@ class activity_forgotPassword : AppCompatActivity() {
                     //Mensaje de correo enviado
                     val builder = AlertDialog.Builder(this)
                     builder.setTitle("Aviso")
-                    builder.setMessage("Te he enviado un correo electronico.")
+                    builder.setMessage("Te he enviado un correo electrónico.")
                     builder.setPositiveButton("OK",null)
                     val dialog:AlertDialog=builder.create()
                     dialog.show()
