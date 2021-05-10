@@ -5,6 +5,7 @@ import android.content.Intent.ACTION_VIEW
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -18,6 +19,7 @@ import com.example.gg.utils.Constants.OPEN_SEARCH
 import com.example.gg.utils.Constants.RECEIVE_ID
 import com.example.gg.utils.Constants.SEND_ID
 import com.example.gg.utils.Time
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 //Hay errores con este import
 //import kotlinx.android.synthetic.main.activity_main.*
@@ -28,7 +30,7 @@ class MainActivityChat : AppCompatActivity() {
     //Me marcaba como error unresolved reference, así que use el metodo que usan las otras activitys para
     //usar las view
     private lateinit var  adapter: MessagingAdapter
-    private lateinit var rv_messages: RecyclerView
+    //private lateinit var rv_messages: RecyclerView
     // Nombres a los que el bot se identifica
     private var botList = listOf("Ed", "Profesor Ed", "Super Ed", "Mr. Ed")
 
@@ -42,6 +44,13 @@ class MainActivityChat : AppCompatActivity() {
 
         val random = (0..3).random()
         customMessage("Hola!!! hoy estas hablando con ${botList[random]} como te puedo ayudar?")
+
+        //Logout
+        //En esta parte del código obtenemos el email que enviamos desde
+        //la activity del login
+        val bundle:Bundle? = intent.extras
+        val email:String?  = bundle?.getString("email")
+        setup(email)
     }
 
     private fun clickEvents() {
@@ -139,5 +148,19 @@ class MainActivityChat : AppCompatActivity() {
                 rv_messages.scrollToPosition(adapter.itemCount-1)
             }
         }
+    }
+
+
+    private fun setup(email: String?){
+        //Se agrega el ? para evitar excepciones de puntero nulo
+        textViewUserName?.text = email
+
+        //Boton del logout
+    }
+
+    //Funcion que gestiona el logout
+    public fun LogOut(view: View){
+        FirebaseAuth.getInstance().signOut()
+        onBackPressed()
     }
 }

@@ -14,6 +14,8 @@
         <activity android:name=".ui.Activity_login" />
         <activity android:name=".ui.Activity_register" />
         <activity android:name=".ui.MainActivityChat" />
+        <activity android:name=".ui.Activity_forgotPassword" />
+        <activity android:name=".ui.Activity_welcome"/>
         <!-- activity android:name=".activity_welcome" -->
         <!-- en mi caso no voy a usar el manifest para iniciar la actividad principal-->
         <!-- Voy a marcar como la activity principal a MainActiviy y desde ella voy a llamar a -->

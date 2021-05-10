@@ -8,13 +8,14 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gg.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-
+import java.util.stream.DoubleStream.builder
 
 
 @Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
@@ -86,18 +87,44 @@ class Activity_register : AppCompatActivity() {
 
                     userDB.child("Nombre").setValue(username)
                     userDB.child("Apellido").setValue(lastname)
-                   Login()
+                    userDB.child("Email").setValue(email)
+                    userDB.child("Contraseña").setValue(password)
+                   login()
 
+
+                }
+                else
+                {
 
                 }
 
             }
 
         }
+        else //Hay campos vacios
+        {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Error")
+            builder.setMessage("¡Ups! Parece que no haz llenado todos tus datos.")
+            builder.setPositiveButton("OK",null)
+            val dialog:AlertDialog=builder.create()
+            dialog.show()
+
+            //Muestra en que parte esta el error
+            if(TextUtils.isEmpty(username) && TextUtils.isEmpty(lastname) && TextUtils.isEmpty(email) && TextUtils.isEmpty(password))
+            {
+                txtUsename.setError("Nombre");
+                txtLastName.setError("Apellido");
+                txtEmail.setError("Email");
+                txtPassword.setError("Contraseña");
+            }
+
+
+        }
 
     }
     // Inicia ventana Login
-    private fun Login()
+    private fun login()
     {
         startActivity(Intent(this, Activity_login::class.java))
 
@@ -115,4 +142,11 @@ class Activity_register : AppCompatActivity() {
             }
         }
     }
+    //Abre ventana Login
+    fun txtLogin(view: View)
+    {
+        startActivity(Intent(this, Activity_login::class.java))
+    }
+
+
 }

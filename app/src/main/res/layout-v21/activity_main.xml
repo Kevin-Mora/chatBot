@@ -42,14 +42,38 @@
 
     </LinearLayout>
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_messages"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/ll_layout_bar"
-        android:layout_below="@+id/dark_divider"
+        android:layout_below="@+id/log_out_layout"
         tools:itemCount="20"
         tools:listitem="@layout/message_item" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/log_out_layout"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dark_divider"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".50"
+            android:text="Usuario:" />
+
+        <Button
+            android:id="@+id/buttonLogOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="LogOut"
+            android:layout_weight=".50"
+            android:text="Log out" />
+    </LinearLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="10dp"
