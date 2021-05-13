@@ -39,7 +39,7 @@
             android:backgroundTint="@color/colorBlue"
             android:text="Enviar"
             android:textColor="@android:color/white"
-            app:backgroundTint="@color/colorBlue" />
+            app:backgroundTint="@color/colorBlueOcean" />
 
     </LinearLayout>
 

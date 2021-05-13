@@ -6,7 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowBackground">@color/colorBlue</item>
+        <item name="android:windowBackground">@color/colorBlueOcean</item>
 
 
         <item name="android:statusBarColor">#fff</item>
@@ -19,7 +19,7 @@
 
     </style>
 
-    <style name="MyActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="MyActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="titleTextStyle">@style/MyTitleTextStyle</item>
     </style>
 
