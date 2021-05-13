@@ -17,7 +17,9 @@ import com.example.gg.utils.Constants.RECEIVE_ID
 import com.example.gg.utils.Constants.SEND_ID
 import com.example.gg.utils.Time
 import android.view.View
+import android.widget.Toolbar
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.*
 
@@ -30,6 +32,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Set the toolbar as support action bar
+        setSupportActionBar(toolbar as androidx.appcompat.widget.Toolbar?)
+
 
         recyclerView()
 

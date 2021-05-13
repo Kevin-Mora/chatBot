@@ -12,19 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity_forgotPassword"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
-        <activity android:name=".activity_login"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".activity_login">
         </activity>
-        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
         <activity android:name=".activity_register"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
         <activity
             android:name=".ActivityWelcome"
             android:label="MyTutorEd"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
