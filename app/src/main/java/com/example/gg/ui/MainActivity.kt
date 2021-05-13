@@ -5,6 +5,8 @@ import android.content.Intent.ACTION_VIEW
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gg.R
 import com.example.gg.data.Message
@@ -14,6 +16,8 @@ import com.example.gg.utils.Constants.OPEN_SEARCH
 import com.example.gg.utils.Constants.RECEIVE_ID
 import com.example.gg.utils.Constants.SEND_ID
 import com.example.gg.utils.Time
+import android.view.View
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.*
 
@@ -128,5 +132,37 @@ class MainActivity : AppCompatActivity() {
                 rv_messages.scrollToPosition(adapter.itemCount-1)
             }
         }
+    }
+
+    // Damos permisos para implementar menu
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main,menu)
+
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    // Definimos que hace cada opcion del menu
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle item selection
+        return when (item.itemId) {
+            R.id.itemConfiguraciones -> {
+
+                true
+            }
+            R.id.itemSalir -> {
+                LogOut()
+
+
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+
+    //Funcion que gestiona el logout
+    private fun LogOut(){
+        FirebaseAuth.getInstance().signOut()
+        onBackPressed()
     }
 }
