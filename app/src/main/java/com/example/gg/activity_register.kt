@@ -24,7 +24,7 @@ class activity_register : AppCompatActivity() {
     private lateinit var txtLastName: EditText
     private lateinit var txtEmail: EditText
     private lateinit var txtPassword: EditText
-    private lateinit var progressBar: ProgressBar
+    //private lateinit var progressBar: ProgressBar
     private lateinit var dbReference: DatabaseReference
     private lateinit var database: FirebaseDatabase
     private lateinit var auth: FirebaseAuth
@@ -39,7 +39,7 @@ class activity_register : AppCompatActivity() {
         txtEmail=findViewById(R.id.txtEmail)
         txtPassword=findViewById(R.id.txtPassword)
 
-        progressBar= ProgressBar(this)
+        //progressBar= ProgressBar(this)
 
         database= FirebaseDatabase.getInstance() //Instancia para BD
         auth= FirebaseAuth.getInstance() //Instancia para la autenticación
@@ -70,9 +70,9 @@ class activity_register : AppCompatActivity() {
             auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this){ // Registro con Email y Contraseña
                     task ->
 
-                if(task.isComplete) //Si esta completo
+                if(task.isSuccessful) //Se registro correctamente
                 {
-                    val user:FirebaseUser?=auth.currentUser
+                    val user:FirebaseUser?=auth.currentUser //puede que tenga valor nulo
                     verificarEmail(user)
 
                     //Dar de alta los otros datos en la BD
@@ -82,14 +82,12 @@ class activity_register : AppCompatActivity() {
                     userDB.child("Nombre").setValue(username)
                     userDB.child("Apellido").setValue(lastname)
                     userDB.child("Email").setValue(email)
-                    userDB.child("Contraseña").setValue(password)
+                    //userDB.child("Contraseña").setValue(password)
                    login()
-
-
                 }
                 else
                 {
-
+                    Toast.makeText(this, "¡Ups! Parece que tenemos algunos problemas.", Toast.LENGTH_LONG).show()
                 }
 
             }
@@ -113,11 +111,10 @@ class activity_register : AppCompatActivity() {
                 txtPassword.setError("Contraseña");
             }
 
-
         }
 
     }
-    // Inicia ventana Login
+    // Si se registro correctamente abre Login
     private fun login()
     {
         startActivity(Intent(this, activity_login::class.java))
@@ -128,7 +125,7 @@ class activity_register : AppCompatActivity() {
     {
         user?.sendEmailVerification()?.addOnCompleteListener(this)
         { task ->
-            if(task.isComplete)
+            if(task.isSuccessful)
             {
                 Toast.makeText(this, "Email enviado", Toast.LENGTH_LONG).show()
             }else{

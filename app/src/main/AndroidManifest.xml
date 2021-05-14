@@ -16,16 +16,13 @@
         </activity>
         <activity android:name=".activity_login">
         </activity>
-        <activity android:name=".ui.MainActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".ui.MainActivity">
         </activity>
-        <activity android:name=".activity_register"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".activity_register">
         </activity>
         <activity
             android:name=".ActivityWelcome"
-            android:label="MyTutorEd"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:label="MyTutorEd">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
