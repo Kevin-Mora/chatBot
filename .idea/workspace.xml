@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb1d28a1-9436-4002-ac86-c8a139d642cc" name="Default Changelist" comment="" />
+    <list default="true" id="eb1d28a1-9436-4002-ac86-c8a139d642cc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/GGR1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GGR1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GGR1/app/src/main/java/com/example/gg/activity_login.kt" beforeDir="false" afterPath="$PROJECT_DIR$/GGR1/app/src/main/java/com/example/gg/activity_login.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GGR1/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GGR1/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,9 +43,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1621319229205" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1621319240487">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1621518635195">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1621319240487" />
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1621518635195" />
   </component>
 </project>
