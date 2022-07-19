@@ -4,7 +4,7 @@ Es un proyecto aplicación de chatbot enfocado en el ámbito educativo, antes de
 
 
 ## Descripción general del proyecto
-MyTutorEd es un chatbot que trabaja en el ámbito educativo que cuenta( o contará en su versión final) con los siguiente apartados:
+MyTutorEd es un chatbot que trabaja en el ámbito educativo que cuenta( o contará en su versión final que en este momento se encuentra privada en otro repositorio con fines mas académicos 19/07/22) con los siguiente apartados:
 ● Se puede iniciar sesión en la cual se mantengan tus datos guardados
 ● Podrás hacer preguntas sobre la materia que tengas dudas (en primera instancia solo
 la materia de “Ingeniería de software”)
