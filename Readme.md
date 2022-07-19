@@ -17,3 +17,5 @@ este idioma y viceversa volviendo al idioma español.
 ### Especificaciones
 Esta hecha en android studio utilizando firebase como manejador de base de datos, funcionando  en Android 5.0 en adelante.
 
+![]()
+![]()
