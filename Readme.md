@@ -17,5 +17,5 @@ este idioma y viceversa volviendo al idioma español.
 ### Especificaciones
 Esta hecha en android studio utilizando firebase como manejador de base de datos, funcionando  en Android 5.0 en adelante.
 
-![]()
-![]()
+![MyTuto](https://github.com/Kevin-Mora/chatBot/blob/main/diseñomytu1.PNG)
+![MyTuto](https://github.com/Kevin-Mora/chatBot/blob/main/diseñomytu2.PNG)
